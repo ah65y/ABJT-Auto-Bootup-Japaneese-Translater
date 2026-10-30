@@ -24,10 +24,6 @@ Minecraft 1.20.1 / Forge 47.4.28 / Java 17 client mod that generates and applies
 
 Run gradle build to build the mod. The jar is created under build/libs.
 
-## Ollama
-
-Keep the Ollama server running locally. The default endpoint is http://127.0.0.1:11434.
-
 ## Using AI
 GPT-6 Luna (free)
 
@@ -71,9 +67,6 @@ Java 17
 Minecraft 1.20.1
 Minecraft Forge 47.4.28
 Gradle 8.8
-
-## Ollama
-Ollama サーバーをローカルで実行し続けた状態にしてください。デフォルトのエンドポイントは [http://127.0.0.1:11434] です。
 
 ## 使用AI 
 GPT-6 Luna (free)
