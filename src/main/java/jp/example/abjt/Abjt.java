@@ -42,6 +42,8 @@ public final class Abjt {
         event.addListener(Button.builder(net.minecraft.network.chat.Component.literal("ABJT 設定"), b ->
                 Minecraft.getInstance().setScreen(new AbjtSettingsScreen(event.getScreen())))
                 .bounds(x, 8, 100, 20).build());
+        event.addListener(Button.builder(net.minecraft.network.chat.Component.literal("翻訳を生成"), b ->
+                startGeneration(event.getScreen())).bounds(x, 32, 100, 20).build());
         if (!checkedFirstLaunch) {
             checkedFirstLaunch = true;
             Path marker = Minecraft.getInstance().gameDirectory.toPath().resolve("config/abjt_first_run_done");
@@ -56,11 +58,7 @@ public final class Abjt {
     public void onClientTick(TickEvent.ClientTickEvent event) {
         if (event.phase != TickEvent.Phase.END || regenerateKey == null) return;
         while (regenerateKey.consumeClick()) {
-            if (Minecraft.getInstance().screen == null || Minecraft.getInstance().screen instanceof TitleScreen)
-                startGeneration(Minecraft.getInstance().screen);
-            else {
-                Minecraft.getInstance().player.displayClientMessage(net.minecraft.network.chat.Component.literal("[ABJT] F8で再生成するにはタイトル画面に戻ってください"), true);
-            }
+            startGeneration(Minecraft.getInstance().screen);
         }
     }
     private void startGeneration(net.minecraft.client.gui.screens.Screen parent) {
