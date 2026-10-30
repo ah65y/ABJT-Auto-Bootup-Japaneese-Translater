@@ -24,11 +24,19 @@ Minecraft 1.20.1 / Forge 47.4.28 / Java 17 client mod that generates and applies
 
 Run gradle build to build the mod. The jar is created under build/libs.
 
-## Ollama setup
-
-Install Ollama, then run: ollama pull translategemma:12b
+## Ollama
 
 Keep the Ollama server running locally. The default endpoint is http://127.0.0.1:11434.
+
+## Using AI
+GPT-6 Luna (free)
+
+## Testing Device
+OS: Windows 11 Home (64bit)
+CPU: Intel Core i7 13700F
+RAM: DDR4 48GB (2133 MT/s)
+GPU: NVIDIA GeForce RTX 3060 12GB
+Storage: SSD 2.5TB
 
 ## Current status
 
@@ -62,6 +70,7 @@ Minecraft 1.20.1
 Minecraft Forge 47.4.28
 Gradle 8.8
 
+## Ollama
 Ollama サーバーをローカルで実行し続けた状態にしてください。デフォルトのエンドポイントは [http://127.0.0.1:11434] です。
 
 ## 使用AI 
@@ -74,7 +83,6 @@ RAM: DDR4 48GB (2133 MT/s)
 GPU: NVIDIA GeForce RTX 3060 12GB
 ストレージ: SSD 約2.5TB
 
-## システム要件
-最低:ローカルLLMを実行できるスペック                                  
-推奨:高性能なローカルLLMを実行できるスペック
+## 開発状況
+アルファ版完成
 
