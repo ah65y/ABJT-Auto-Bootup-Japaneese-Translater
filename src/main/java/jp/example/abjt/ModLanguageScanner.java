@@ -73,6 +73,7 @@ public final class ModLanguageScanner {
                 } catch (Exception e) { Abjt.LOGGER.warn("Language JSON parse failed: {}", job.entry, e); }
             }
             TranslationProgress.total = tasks.size();
+            deleteTree(PACK_DIR.resolve("assets"));
             Files.createDirectories(PACK_DIR.resolve("assets"));
             Files.writeString(PACK_DIR.resolve("pack.mcmeta"), "{\"pack\":{\"pack_format\":15,\"description\":\"ABJT Japanese translations\"}}", StandardCharsets.UTF_8);
             Map<String,JsonObject> outputs = new LinkedHashMap<>();
@@ -120,6 +121,12 @@ public final class ModLanguageScanner {
         }
     }
 
+    private static void deleteTree(Path root) throws Exception {
+        if (!Files.exists(root)) return;
+        try (var paths = Files.walk(root)) {
+            for (Path path : paths.sorted(Comparator.reverseOrder()).toList()) Files.deleteIfExists(path);
+        }
+    }
     private static void loadJsonMap(Path file, Map<String,String> map) {
         try { if (Files.exists(file)) JsonParser.parseString(Files.readString(file)).getAsJsonObject().entrySet().forEach(e -> map.put(e.getKey(), e.getValue().getAsString())); }
         catch (Exception e) { Abjt.LOGGER.warn("Could not load ABJT cache", e); }
