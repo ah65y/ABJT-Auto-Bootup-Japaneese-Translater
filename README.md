@@ -34,7 +34,7 @@ Keep the Ollama server running locally. The default endpoint is http://127.0.0.1
 
 WIP
 
-##日本語
+## 日本語
 現在の開発版での実装機能
 ローカルの Ollama サーバー上の TranslateGemma 12B をデフォルトの翻訳エンジンとして使用 (translategemma:12b)。
 
@@ -71,3 +71,6 @@ Ollama のセットアップ
 Ollama をインストールした後、次のコマンドを実行してください：ollama pull translategemma:12b
 
 Ollama サーバーをローカルで実行し続けた状態にしてください。デフォルトのエンドポイントは [http://127.0.0.1:11434](http://127.0.0.1:11434) です。
+
+## 使用AI 
+GPT-6 Luna (free)
