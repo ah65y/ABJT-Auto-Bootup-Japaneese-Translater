@@ -36,7 +36,7 @@ Storage: SSD 2.5TB
 
 ## Current status
 
-WIP
+Alpha WIP
 
 ## 日本語
 Minecraft 1.20.1 / Forge 47.4.28 / Java 17クライアントモッドで、インストールされたMOD向けに日本語リソースパックを生成・適用します。
@@ -79,5 +79,5 @@ GPU: NVIDIA GeForce RTX 3060 12GB
 ストレージ: SSD 約2.5TB
 
 ## 開発状況
-アルファ版完成
+アルファ版作成中
 
