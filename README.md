@@ -39,7 +39,7 @@ Storage: SSD 2.5TB
 Alpha WIP
 
 ## 日本語
-Minecraft 1.20.1 / Forge 47.4.28 / Java 17クライアントモッドで、インストールされたMOD向けに日本語リソースパックを生成・適用します。
+Minecraft 1.20.1 / Forge 47.4.28 / Java 17クライアントモッドで、インストールされたMOD向けに日本語リソースパックを生成します。
 
 ## 現在の開発版での実装機能
 ローカルの Ollama サーバー上の TranslateGemma 12B をデフォルトの翻訳エンジンとして使用 (translategemma:12b)。
