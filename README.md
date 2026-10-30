@@ -32,10 +32,9 @@ Keep the Ollama server running locally. The default endpoint is http://127.0.0.1
 
 ## Current status
 
-Development implementation is committed. GitHub Actions is running the first Forge build; treat the project as unverified until that build completes and the mod is tested in Minecraft.
-ABJT-Auto-Bootup-Japanese-Translater
-Minecraft 1.20.1 / Forge 47.4.28 / Java 17 クライアント用MOD。インストールされているMODの日本語言語リソースパックを自動生成して適用します。
+WIP
 
+##日本語
 現在の開発版での実装機能
 ローカルの Ollama サーバー上の TranslateGemma 12B をデフォルトの翻訳エンジンとして使用 (translategemma:12b)。
 
