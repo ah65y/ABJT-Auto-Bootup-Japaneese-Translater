@@ -14,6 +14,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
+import net.minecraftforge.fml.event.config.ModConfigEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 import java.nio.file.Files;
@@ -25,12 +26,20 @@ public final class Abjt {
     public static final Logger LOGGER = LogUtils.getLogger();
     private static KeyMapping regenerateKey;
     private static boolean checkedFirstLaunch;
+    private static ModConfig clientConfig;
 
     public Abjt() {
         ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, AbjtConfig.SPEC);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::registerKeys);
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::onConfigLoading);
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.addListener(this::onScreenInit);
+    }
+    private void onConfigLoading(ModConfigEvent.Loading event) {
+        if (event.getConfig().getSpec() == AbjtConfig.SPEC) clientConfig = event.getConfig();
+    }
+    public static void saveConfig() {
+        if (clientConfig != null) clientConfig.save();
     }
     private void registerKeys(RegisterKeyMappingsEvent event) {
         regenerateKey = new KeyMapping("key.abjt.regenerate", InputConstants.Type.KEYSYM, InputConstants.KEY_F8, "key.categories.abjt");
