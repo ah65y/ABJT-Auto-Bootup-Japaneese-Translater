@@ -56,21 +56,25 @@ Minecraft の mods ディレクトリ内にある JAR ファイル内の assets/
 
 タイトル画面の設定および進捗画面に、現在の MOD、エントリ数、進捗状況、速度、および推定残り時間を表示。
 
-ビルド要件
+## ビルド要件
 Java 17
-
 Minecraft 1.20.1
-
 Minecraft Forge 47.4.28
-
 Gradle 8.8
 
-gradle build を実行して MOD をビルドします。JAR ファイルは build/libs 配下に生成されます。
-
-Ollama のセットアップ
-Ollama をインストールした後、次のコマンドを実行してください：ollama pull translategemma:12b
-
-Ollama サーバーをローカルで実行し続けた状態にしてください。デフォルトのエンドポイントは [http://127.0.0.1:11434](http://127.0.0.1:11434) です。
+Ollama サーバーをローカルで実行し続けた状態にしてください。デフォルトのエンドポイントは [http://127.0.0.1:11434] です。
 
 ## 使用AI 
 GPT-6 Luna (free)
+
+## テスト環境
+OS: Windows 11 Home (64bit)
+CPU: Intel Core i7 13700F
+RAM: DDR4 48GB (2133 MT/s)
+GPU: NVIDIA GeForce RTX 3060 12GB
+ストレージ: SSD 約2.5TB
+
+## システム要件
+最低:                                推奨:
+ローカルLLMを実行できるスペック         高性能なローカルLLMを実行できるスペック
+
