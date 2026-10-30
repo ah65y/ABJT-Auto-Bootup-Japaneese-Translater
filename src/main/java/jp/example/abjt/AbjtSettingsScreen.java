@@ -34,6 +34,7 @@ public final class AbjtSettingsScreen extends Screen {
         AbjtConfig.PROVIDER.set(provider); AbjtConfig.OLLAMA_URL.set(url.getValue().trim());
         AbjtConfig.OLLAMA_MODEL.set(model.getValue().trim()); AbjtConfig.GOOGLE_FALLBACK.set(fallback);
         AbjtConfig.AUTO_FIRST_RUN.set(auto); AbjtConfig.SHOW_PROGRESS.set(progress);
+        Abjt.saveConfig();
         if (minecraft != null) { minecraft.options.save(); minecraft.setScreen(parent); }
     }
     @Override public void render(GuiGraphics g,int mx,int my,float pt) {
